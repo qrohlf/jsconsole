@@ -20,13 +20,15 @@ html {
 
 body {
   min-height: 100%;
+  padding-top: 16px;
+  padding-bottom: 96px;
   background: #34495e;
   color: #fff;
   font-family: Menlo, Consolas, monaco, monospace
 }
 
 .input {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
