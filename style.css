@@ -58,7 +58,6 @@ body {
   text-align: right;
   margin-left: -32px;
   margin-right: 16px;
-  color: #95a5a6;
   display: block;
   float: left;
 }
@@ -77,11 +76,11 @@ body {
   margin: 3px 0;
 }
 
+.logline.output {
+  color: #bdc3c7;
+}
+
 .logline img {
   max-width: 100%;
   vertical-align: bottom;
-}
-
-.cmd {
-  color: #bdc3c7;
 }
