@@ -50,14 +50,15 @@ body {
 
 .log {
   counter-reset: log;
+  margin: 0 16px;
 }
 
 .logline::before {
   counter-increment: log;
   content: counter(log);
-  width: 32px;
+  width: 16px;
   text-align: right;
-  margin-left: -64px;
+  margin-left: -32px;
   margin-right: 16px;
   color: #95a5a6;
   display: block;
@@ -65,7 +66,7 @@ body {
 }
 
 .logline {
-  padding-left: 64px;
+  padding-left: 32px;
   margin: 3px 0;
 }
 
