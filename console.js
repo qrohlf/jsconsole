@@ -77,11 +77,7 @@ function println(item) {
   var logline = $('<div class="logline output"></div>').append(item)[0];
   $('.log').append(logline);
   logline.scrollIntoView();
-  if (logline.firstElementChild) {
-    return $(logline.firstElementChild);
-  } else {
-    return $(logline);
-  }
+  return $(logline);
 }
 
 function printcmd(cmd) {
