@@ -54,8 +54,6 @@ body {
 }
 
 .logline::before {
-  counter-increment: log;
-  content: counter(log);
   width: 16px;
   text-align: right;
   margin-left: -32px;
@@ -63,6 +61,15 @@ body {
   color: #95a5a6;
   display: block;
   float: left;
+}
+
+.logline.output::before {
+  counter-increment: log;
+  content: counter(log);
+}
+
+.logline.cmd::before {
+  content: '$';
 }
 
 .logline {
@@ -73,4 +80,8 @@ body {
 .logline img {
   max-width: 100%;
   vertical-align: bottom;
+}
+
+.cmd {
+  color: #bdc3c7;
 }

@@ -12,3 +12,9 @@ The  `handleInput` function will be called and passed the user's input whenever 
 
 
 The `println` function takes one argument, and will print the argument to the console. The argument can be either a string or an HTML node. 
+
+# Useful Documentation
+
+You may find the following JavaScript features useful:
+
+- [String.match](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) - allows you to match a string against a regular expression.

@@ -29,6 +29,7 @@ $(document).ready(function() {
   //Attach a submit handler to the form
   $('form').on('submit', function(event) {
     addToHistory(prompt.val());
+    printcmd(prompt.val());
     handleInput(prompt.val());
     prompt.val('');
     event.preventDefault();
@@ -73,7 +74,7 @@ $(document).ready(function() {
 });
 
 function println(item) {
-  var logline = $('<div class="logline"></div>').append(item)[0];
+  var logline = $('<div class="logline output"></div>').append(item)[0];
   $('.log').append(logline);
   logline.scrollIntoView();
   if (logline.firstElementChild) {
@@ -81,6 +82,12 @@ function println(item) {
   } else {
     return $(logline);
   }
+}
+
+function printcmd(cmd) {
+  var logline = $('<div class="logline cmd"></div>').append(cmd)[0];
+  $('.log').append(logline);
+  logline.scrollIntoView();
 }
 
 function welcome() {
