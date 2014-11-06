@@ -66,6 +66,7 @@ body {
 
 .logline {
   padding-left: 64px;
+  margin: 3px 0;
 }
 
 .logline img {

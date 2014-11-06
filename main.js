@@ -29,12 +29,15 @@ $(document).ready(function() {
   //Get a handle on the prompt element
   var prompt = $('#prompt');
   var history = [];
-  var history_index = 0;
+  if (localStorage.history) {
+    history = JSON.parse(localStorage.history);
+  }
+  var history_index = history.length;
   var temp_command;
 
   //Attach a submit handler to the form
   $('form').on('submit', function(event) {
-    history.push(prompt.val());
+    addToHistory(prompt.val());
     handleInput(prompt.val());
     prompt.val('');
     event.preventDefault();
@@ -67,6 +70,12 @@ $(document).ready(function() {
         }
     }
   });
+
+  function addToHistory(item) {
+    //add an item to the localstorage-backed history
+    history.push(item);
+    localStorage.history = JSON.stringify(history);
+  }
 
   welcome();
 
