@@ -1,8 +1,8 @@
 //Declare a main function
 function main(prompt_value) {
-  var image = prompt_value.match(/^img (https?:\/\/.*)$/);
-  if (image) {
-    var image_url = image[1];
+  var words = prompt_value.split(' ');
+  if (words[0] == 'img') {
+    var image_url = words[1];
     println($("<img src='"+image_url+"'/>"));
   } else {
     println(prompt_value);
